@@ -3,13 +3,17 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/videoio.hpp>
 #include <opencv2/imgproc.hpp>
+
+#include <cloth.h>
+#include <vector>
+#include <string>
 #include <iostream>
 
 using namespace std;
 using namespace cv;
 
 
-Mat cloth, clothhsv, bgimg;
+Mat clothhsv, bgimg;
 int Hmin, Smin, Vmin;
 int Hmax, Smax, Vmax;
 
@@ -52,38 +56,14 @@ int main()
     /*imshow("Background Image", img);
     waitKey(0);*/
 
-    ///ANALYZING THE CLOTH    
 
-    cloth = imread("resource/Cloth.jpg");
-    resize(cloth, cloth, Size(640, 480)); 
-    cvtColor(cloth, clothhsv, COLOR_BGR2HSV);
-
-	/*namedWindow("Trackbars", WINDOW_NORMAL);
-    createTrackbar("H Min", "Trackbars", &Hmin, 179);
-    createTrackbar("H Max", "Trackbars", &Hmax, 179);
-    createTrackbar("S Min", "Trackbars", &Smin, 255);
-    createTrackbar("S Max", "Trackbars", &Smax, 255);
-    createTrackbar("V Min", "Trackbars", &Vmin, 255);
-    createTrackbar("V Max", "Trackbars", &Vmax, 255);
-
-	while (true)
-	{
-        imshow("Clothresize", cloth);
-		Mat mask;
-		inRange(clothhsv, Scalar(Hmin, Smin, Vmin), Scalar(Hmax, Smax, Vmax), mask);
-		imshow("Mask", mask);
-		Mat result;
-		bitwise_and(cloth, cloth, result, mask);
-		imshow("Result", result);
-		waitKey(1);
-	}*/
-
-	//Final values of the cloth is (blue)
-    Hmin = 90, Hmax = 128;
-    Smin = 50, Smax = 255;
-    Vmin = 70, Vmax = 255;
-
-
+	cloth cl;
+	vector<int> hsvcl = cl.setcloth(); //by default the color of cloak is blue// To change the color of the cloak, 
+									   //use the setcloth function with the path of the image as the argument
+    Hmin = hsvcl[0], Hmax = hsvcl[1];
+	Smin = hsvcl[2], Smax = hsvcl[3];
+	Vmin = hsvcl[4], Vmax = hsvcl[5];
+    
 
 	//creating invisilibity cloak
 
@@ -108,9 +88,10 @@ int main()
 		Mat mask;
 		inRange(hsv, Scalar(Hmin, Smin, Vmin), Scalar(Hmax, Smax, Vmax), mask);
 		Mat result;
-		bitwise_and(frame, frame, result, mask);
-		bitwise_and(bgimg, bgimg, frame, mask);   
+		bitwise_and(frame, frame, result, mask);  //superimposing the frame on the frame
+		bitwise_and(bgimg, bgimg, frame, mask);   //superimposing the background image on the frame
         
+		
 		imshow("Frame", frame);
 		imshow("Mask", mask);
 		imshow("Result", result);
@@ -118,12 +99,11 @@ int main()
 
 		auto key = waitKey(1);
 
-		if (key == int("Q") || key == int('q'))
+		if (key == int("Q") || key == int('q')) //press q to exit
 		{
 			cap.release();
 			destroyAllWindows();
 			break;
-
 		}
 
 	}
