@@ -1,0 +1,4 @@
+﻿  main.cpp
+E:\Projects\invisibility_cloak\invisibility_cloak\main.cpp(121,17): warning C4311: '<function-style-cast>': pointer truncation from 'const char *' to 'int'
+E:\Projects\invisibility_cloak\invisibility_cloak\main.cpp(121,17): warning C4302: '<function-style-cast>': truncation from 'const char *' to 'int'
+  invisibility_cloak.vcxproj -> E:\Projects\invisibility_cloak\invisibility_cloak\x64\Debug\invisibility_cloak.exe
