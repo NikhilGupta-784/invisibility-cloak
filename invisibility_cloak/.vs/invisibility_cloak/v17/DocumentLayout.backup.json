@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "E:\\Projects\\invisibility_cloak\\invisibility_cloak\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7F08B28-83DD-4538-90B8-1C86C25AAC8E}|invisibility_cloak.vcxproj|E:\\Projects\\invisibility_cloak\\invisibility_cloak\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C7F08B28-83DD-4538-90B8-1C86C25AAC8E}|invisibility_cloak.vcxproj|E:\\Projects\\Invisibility_cloak\\invisibility_cloak\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C7F08B28-83DD-4538-90B8-1C86C25AAC8E}|invisibility_cloak.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -35,8 +35,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-31T15:18:05.362Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -46,11 +45,10 @@
               "RelativeDocumentMoniker": "cloth.cpp",
               "ToolTip": "E:\\Projects\\invisibility_cloak\\invisibility_cloak\\cloth.cpp",
               "RelativeToolTip": "cloth.cpp",
-              "ViewState": "AgIAABAAAAAAAAAAAAAjwBoAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAjwBoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-31T14:59:04.259Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -60,7 +58,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "E:\\Projects\\invisibility_cloak\\invisibility_cloak\\main.cpp*",
               "RelativeToolTip": "main.cpp*",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAjwFEAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAF8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-31T14:52:18.173Z",
               "IsPinned": true,

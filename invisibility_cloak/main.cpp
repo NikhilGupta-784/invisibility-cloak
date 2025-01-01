@@ -39,23 +39,39 @@ Mat backgroundimage()
 
 int main()
 {
+
     waitKey(3000);
+	cout << "Welcome to the Invisibility Cloak!!" << endl;
+	waitKey(1000);
+	cout << "Please wait for the background image to be captured" << endl;
+	waitKey(1500);
+	cout << "Please make sure that the background is static and there is no movement in the background" << endl;
+	waitKey(1500);
     cout << "Capturing background image in..." << endl;
     
     for (int i = 3; i >= 1; i--)
     {
         cout << i << endl;
-        waitKey(1000);
+        waitKey(1500);
     }
 
     bgimg = backgroundimage();
-	cout << "Background image captured" << endl;
+	if (bgimg.empty())
+	{
+		cout << "Error in capturing background image" << endl;
+		return -1;
+	}
+	else
+	{
+		cout << "Background image captured" << endl;
+	}
 
-
+	
 
     /*imshow("Background Image", img);
     waitKey(0);*/
 
+	cout << "Please make sure that the cloak is not of the same color as the background by default cloak is Blue" << endl;
 
 	cloth cl;
 	vector<int> hsvcl = cl.setcloth(); //by default the color of cloak is blue// To change the color of the cloak, 
@@ -66,6 +82,12 @@ int main()
     
 
 	//creating invisilibity cloak
+
+	waitKey(3000);
+	cout << "Invisibility cloak is ready" << endl;
+	waitKey(1000);
+	cout << "Please wear the cloak" << endl;
+	waitKey(1000);
 
 	VideoCapture cap(0);
 	if (!cap.isOpened())
@@ -79,7 +101,7 @@ int main()
 		cap >> frame;
 		if (frame.empty())
 		{
-			cout << "No captured frame" << endl;
+			cout << "No captured frame" << endl; //camera 
 			break;
 		}
 
